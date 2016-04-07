@@ -16,3 +16,24 @@ $pswindow.foregroundcolor = "DarkYellow"
 $pswindow.backgroundcolor = "DarkMagenta"
 
 cls
+
+###################
+# my own settings #
+###################
+$p = $host.privatedata
+$p.ErrorForegroundColor    = "Red"
+$p.ErrorBackgroundColor    = "Black"
+$p.WarningForegroundColor  = "Yellow"
+$p.WarningBackgroundColor  = "Black"
+$p.DebugForegroundColor    = "Yellow"
+$p.DebugBackgroundColor    = "Black"
+$p.VerboseForegroundColor  = "Yellow"
+$p.VerboseBackgroundColor  = "Black"
+$p.ProgressForegroundColor = "Yellow"
+$p.ProgressBackgroundColor = "DarkCyan"
+
+$console = $host.UI.RawUI
+$console.ForegroundColor = "white"
+$console.BackgroundColor = "black"
+
+clear-host
