@@ -56,7 +56,11 @@ class TerminalSelector():
         default = None
 
         if os.name == 'nt':
-            if os.path.exists(os.environ['SYSTEMROOT'] +
+            if os.path.exists(os.environ['ProgramFiles'] + '\\Git\\git-bash.exe'):
+                default = os.environ['ProgramFiles'] + '\\Git\\git-bash.exe'
+            elif os.path.exists(os.environ['ProgramFiles(x86)'] + '\\Git\\git-bash.exe'):
+                default = os.environ['ProgramFiles(x86)'] + '\\Git\\git-bash.exe'
+            elif os.path.exists(os.environ['SYSTEMROOT'] +
                     '\\System32\\WindowsPowerShell\\v1.0\\powershell.exe'):
                 # This mimics the default powershell colors since calling
                 # subprocess.POpen() ends up acting like launching powershell
