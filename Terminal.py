@@ -113,7 +113,7 @@ class TerminalSelector():
                 elif wm[0].startswith('ksmserver'):
                     default = 'konsole'
                 elif wm[0].startswith('lxsession'):
-                    default = 'lxterminal'
+                    default = 'lxsession-default-terminal'
                 elif wm[0].startswith('mate-panel'):
                     default = 'mate-terminal'
             if not default:
